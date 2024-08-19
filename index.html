@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/app.js" defer></script>
+    <script src="./js/filterContent.js" defer></script>
+    <script src="./js/moreInfoPage.js" defer></script>
+    <script src="./js/theamsControls.js" defer></script>
+    <title>What is the world?</title>
+</head>
+<body>
+    <header>
+        <div class="main-header">
+            <h1>Where is the world?</h1>
+            <div class="theam-controls">
+                <label for="switcher">THEAM</label>
+                <input class="switch-theams" type="checkbox" name="switcher" id="switcher">
+            </div>
+        </div>
+        <nav>
+            <div class="search-form">
+                <Label for="search-bar">
+                    <img id="search-icon" src="./content/imges/iconmonstr-magnifier-2.svg" alt="serch">
+                </Label>
+                <input type="text" name="search-bar" id="search-bar" placeholder="Search for a country...">
+            </div>
+
+            <div class="filterRegionContainer">
+                <button class="regionFilterBt">Filter by Region
+                    <img src="./content/imges/down-arrow.png" alt="show">
+                </button>
+                <ul class="filterRegionContent" >
+                    <li class="regionLi" data-region = "all">All</li>
+                    <li class="regionLi" data-region = "africa">Africa</li>
+                    <li class="regionLi" data-region = "americas">Americas</li>
+                    <li class="regionLi" data-region = "asia">Asia</li>
+                    <li class="regionLi" data-region = "europe">Europe</li>
+                    <li class="regionLi" data-region = "oceania">Oceania</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cards-Container"></section>
+    </main>
+</body>
+</html>

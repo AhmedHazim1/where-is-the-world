@@ -1,0 +1,346 @@
+:root{
+    /* Dark Mode Elements */
+    --Dark_Blue : hsl(209, 23%, 22%);
+
+    /* Dark Mode Background */
+    --Very_Dark_Blue : hsl(207, 26%, 17%);
+
+    /* Light Mode Text */
+    --Very_Dark_Blue1 : hsl(200, 15%, 8%);
+
+    /* Light Mode Input */
+    --Dark_Gray : hsl(0, 0%, 92%);
+
+    /* Light Mode Background */
+    --Very_Light_Gray : hsl(0, 0%, 96%);
+
+    /* Dark Mode Text & Light Mode Elements */
+    --White : hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    transition: all .5s ease;
+    background-color: var(--Very_Light_Gray);
+    font-family: 'Nunito Sans', sans-serif;
+}
+.body-DarkMood{
+    background-color: var(--Very_Dark_Blue);
+    color: var(--White);
+}
+/* header */
+.main-header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 4em;
+    background-color: var(--White);
+    color: var(--Dark_Blue);
+    width: 100%;
+    box-shadow: 0 0 .3em var(--Dark_Gray);
+}
+
+.main-header h1{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    font-size: 1.2rem;
+}
+.main-header-DarkMood{
+    background-color: var(--Dark_Blue);
+    color: var(--White);
+    box-shadow: 0 0 .3em var(--Very_Dark_Blue);
+}
+
+/* controls page theam */
+.theam-controls{
+    position: absolute;
+    display: grid;
+    text-align: center;
+    row-gap: .3em;
+    right: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.theam-controls-DarkMood{
+    color: var(--White);
+}
+
+.switch-theams{
+    position: relative;
+    border: 1px solid var(--Dark_Gray);
+    appearance: none;
+    border-radius: 1em;
+    width: 5em;
+    height: 1.5em;
+    transition: all .5s ease;
+    color: var(--White);
+}
+.switch-theams::before{
+    content: "";
+    position: absolute;
+    background-image: url(./content/imges/lightMoon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    top: -1px;
+    left: 0;
+    transition: all .5s ease;
+}
+.switch-theams:checked{
+    border-color: var(--Very_Light_Gray);
+}
+.switch-theams:checked::before{
+    background-image: url(./content/imges/moon.png);
+    transform: translateX(40px) rotate(360deg);
+}
+/* nav bar */
+nav{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    gap: 1em;
+}
+/* search-bar */
+.search-form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    max-width: 25em;
+    height: 2em;
+    background-color: var(--White);
+    border-radius: .3em;
+}
+.search-form-DarkMood{
+    background-color: var(--Dark_Blue);
+}
+#search-icon{
+    position: absolute;
+    opacity: .5;
+    width: 1em;
+    height: auto;
+    top: 25%;
+    left: 5%;
+}
+#search-bar{
+    position: absolute;
+    left: 15%;
+    outline: none;
+    width: 85%;
+    height: 100%;
+    border-color: transparent;
+    background-color: transparent;
+}
+.search-bar-DarkMood{
+    color: var(--White);
+}
+/* filter by region */
+.filterRegionContainer{
+    position: relative;
+    display: inline-block;
+    width: max-content;
+    cursor: pointer;
+}
+.regionFilterBt{
+    display: flex;
+    gap: 2em;
+    border: none;
+    background-color: var(--White);
+    border-radius: .3em;
+    padding: 1em;
+    margin-bottom: .5em;
+    cursor: pointer;
+}
+.regionFilterBt-DarkMood{
+    background-color: var(--Dark_Blue);
+    color: var(--White);
+}
+.regionFilterBt img{
+    width: .6em;
+    height: auto;
+    margin: auto;
+}
+.filterRegionContent{
+    display: none;
+    position: absolute;
+    gap: .5em;
+    background-color: var(--White);
+    width: 9.7em;
+    padding: 1em 0;
+    border-radius: .4em;
+    z-index: 1;
+    transition: all .5s ease;
+}
+.filterRegionContent-DarkMood{
+    color: var(--White);
+    background-color: var(--Dark_Blue);
+}
+
+.filterRegionContent li{
+    padding-left: 1em;
+    list-style: none;
+    transition: all .5s ease;
+}
+.filterRegionContent li:hover{
+    padding-left: 2em;
+}
+/* main contan */
+.cards-Container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin: 0 2.5em;
+    column-gap: 3.5em;
+    row-gap: 2.5em;
+    margin-bottom: 1em;
+}
+/* cards */
+.card{
+    width: 20em;
+    height: 23em;
+    background-color: var(--White);
+    border-radius: .5em;
+    font-size: .8rem;
+    margin: auto;
+    color: var(--Very_Dark_Blue);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.card-DarkMood{
+    color: var(--White);
+    background-color: var(--Dark_Blue);
+}
+.card span{
+    font-size: .8rem;
+    font-weight: 600;
+}
+.flag-img{
+    width: 20em;
+    height: 10em;
+    object-fit: cover;
+    padding-bottom: 2em;
+    border-radius: .5em .5em 0 0;
+    transition: all .5s ease;
+}
+/* card hover */
+.card:hover{
+    width: 21em;
+    height: 24em;
+}
+.card:hover .flag-img{
+    width: 21em;
+    height: 11em;
+}
+
+.country-info{
+    display: grid;
+    gap: .5em;
+    padding-left: 1.5em;
+}
+h1{
+    padding-bottom: .5em;
+}
+h2, h3, h4{
+    font-size: 1rem;
+}
+/* more Info page */
+.moreInfo{
+    margin: 2em 0;
+    margin-left: 2em; 
+}
+.flagInfoPage{
+    width: clamp(5em,80vw,30em);
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: .5em;
+}
+.getBackBt{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: var(--Very_Dark_Blue);
+    background: var(--White);
+    border-color: transparent;
+    border-radius: .2em;
+    padding: .5em 1em;
+    font-size: .8rem;
+    margin-top: 2em;
+    margin-left: 2.5em;
+    transition: all .3s ease;
+}
+.getBackBt-DarkMood{
+    color: var(--White);
+    background: var(--Dark_Blue);
+}
+.getBackBt:hover{
+    scale: 105%;
+}
+.getBackBt img{
+    width: 1.3em;
+    height: auto;
+}
+.moreInfo li{
+    list-style: none;
+    font-size: 1rem;
+}
+.moreInfo li{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.moreInfo li span{
+    font-weight: 400;
+}
+.moreInfo h2{
+    padding-bottom: 1em;
+}
+.borderCountriesContent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    /* max-width: 20em; */
+}
+.borderCountries{
+    font-weight: 400;
+    color: var(--Dark_Blue);
+    background-color: var(--White);
+    border-radius: .2em;
+    padding: .2em 1em;
+}
+.borderCountries-DarkMood{
+    color: var(--White);
+    background-color: var(--Dark_Blue);
+}
+
+/* media */
+@media (min-width: 1000px) {
+    nav{
+        margin-bottom: 2em;
+    }
+    .filterRegionContainer{
+        position: absolute;
+        right: 5%;
+    }
+    .search-form{
+        position: relative;
+        left: 4%;
+    }
+    .moreInfo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+    }
+    .flagInfoPage{
+        width: 30em;
+        height: 20em;
+    }
+    .infoList{
+        display: flex;
+        gap: 2em;
+    }
+}
